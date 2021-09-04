@@ -1,96 +1,143 @@
 <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Primary Meta Tags -->
+    <title>Timetable</title>
+    <meta name="title" content="Timetable" />
+    <meta
+      name="description"
+      content="Having hardtime in finding Timetable?? Use me :)"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Timetable" />
+    <meta
+      property="og:description"
+      content="Having hardtime in finding Timetable?? Use me :)"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!--font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/6b08127ac9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Primary Meta Tags -->
-  <title>Timetable</title>
-  <meta name="title" content="Timetable" />
-  <meta name="description" content="Having hardtime in finding Timetable?? Use me :)" />
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:title" content="Timetable" />
-  <meta property="og:description" content="Having hardtime in finding Timetable?? Use me :)" />
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
-  <!--Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-  <!--font-awesome-->
-  <script src="https://kit.fontawesome.com/6b08127ac9.js" crossorigin="anonymous"></script>
-  <link href="style.css" rel="stylesheet" />
-</head>
-
-<body class="container">
-  <h1 style="text-align: center">ECE Timetable</h1>
-  <br />
-  <div class="staff-list-div">
-    <div class="form-floating">
-      <select class="form-select" id="miniproject">
-        <option selected value="1">R.Ramya</option>
-        <option value="2">M.Shanthi</option>
-        <option value="3">A.Viji</option>
-      </select>
-      <label for="floatingSelectGrid">Miniproject</label>
-    </div>
-    <div class="staff-list-switch">
-      <span>F.N</span>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+  <body class="container">
+    <h1 style="text-align: center">ECE Timetable</h1>
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating">
+        <select class="form-select" id="miniproject">
+          <option selected value="w">R.Ramya</option>
+          <option value="x">M.Shanthi</option>
+          <option value="y">A.Viji</option>
+        </select>
+        <label for="floatingSelectGrid">Miniproject</label>
       </div>
-      <span>A.N</span>
-    </div>
-  </div>
-  <br />
-  <div class="staff-list-div">
-    <div class="form-floating">
-      <select class="form-select" id="wireless">
-        <option selected value="1">L.Rajesh</option>
-        <option value="2">G.Balamurugan</option>
-        <option value="3">T.Subashri</option>
-      </select>
-      <label for="floatingSelectGrid">Wireless Lab</label>
-    </div>
-    <div class="staff-list-switch">
-      <span>F.N</span>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+      <div class="staff-list-switch">
+        <span>F.N</span>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+          />
+        </div>
+        <span>A.N</span>
       </div>
-      <span>A.N</span>
     </div>
-  </div>
-  <br />
-  <div class="staff-list-div">
-    <div class="form-floating">
-      <select class="form-select" id="optical">
-        <option selected value="1">S.Piramasubramaniam</option>
-        <option value="2">S.Vasuhi</option>
-        <option value="3">R.Ramya</option>
-      </select>
-      <label for="floatingSelectGrid">Optical Lab</label>
-    </div>
-    <div class="staff-list-switch">
-      <span>F.N</span>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating">
+        <select class="form-select" id="wireless">
+          <option selected value="w">L.Rajesh</option>
+          <option value="x">G.Balamurugan</option>
+          <option value="y">T.Subashri</option>
+        </select>
+        <label for="floatingSelectGrid">Wireless Lab</label>
       </div>
-      <span>A.N</span>
+      <div class="staff-list-switch">
+        <span>F.N</span>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+          />
+        </div>
+        <span>A.N</span>
+      </div>
     </div>
-  </div>
-  <div class="m-3 text-center">
-    <button class="btn btn-primary" onclick="get_schedule_clk()">GET SCHEDULE</button>
-  </div>
-  <div>
-
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating">
+        <select class="form-select" id="optical">
+          <option selected value="w">S.Piramasubramaniam</option>
+          <option value="x">S.Vasuhi</option>
+          <option value="y">R.Ramya</option>
+        </select>
+        <label for="floatingSelectGrid">Optical Lab</label>
+      </div>
+      <div class="staff-list-switch">
+        <span>F.N</span>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+          />
+        </div>
+        <span>A.N</span>
+      </div>
+    </div>
+    <div class="m-3 text-center">
+      <button class="btn btn-primary" onclick="get_schedule_clk()">
+        GET SCHEDULE
+      </button>
+    </div>
+    <div>
+      <table class="table table-hover">
+        <tr>
+          <th>Day</th>
+          <th>Morning</th>
+          <th>Afternoon</th>
+        </tr>
+        <tbody id="sched_body">
+          <tr>
+            <td>12.2.2021</td>
+            <td>Optical lab</td>
+            <td>Free now</td>
+          </tr>
+          <tr>
+            <td>12.2.2021</td>
+            <td>Optical lab</td>
+            <td>Free now</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
