@@ -1,5 +1,21 @@
-.staff-list-div{
+.staff-list-div {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+.staff-list-div select {
+    width: 55vw;
+    max-width: 200px;
+}
+
+.staff-list-switch {
+    display: flex;
+}
+
+.staff-list-div .form-switch {
+    margin-left: 10px;
+}
+.staff-list-div label{
+    width: max-content;
 }
