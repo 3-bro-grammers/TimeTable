@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Primary Meta Tags -->
-        <title>Timetable</title>
-        <meta name="title" content="Timetable">
-        <meta name="description" content="Having hardtime in finding Timetable?? Use me :)">
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="">
-        <meta property="og:title" content="Timetable">
-        <meta property="og:description" content="Having hardtime in finding Timetable?? Use me :)">
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <!--font-awesome-->
-        <script src="https://kit.fontawesome.com/6b08127ac9.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="container">
-        <h1 style="text-align: center;">ECE Timetable</h1>
-        <br>
-        <div class="col-md">
-          <div class="form-floating">
-            <select class="form-select" id="miniproject" aria-label="Miniproject">
-              <option selected>Select my staff</option>
-              <option value="1">R.Ramya</option>
-              <option value="2">A.Viji</option>
-              <option value="3">M.Shanthi</option>
-            </select>
-            <label for="floatingSelectGrid">Miniproject</label>
-          </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Primary Meta Tags -->
+    <title>Timetable</title>
+    <meta name="title" content="Timetable" />
+    <meta
+      name="description"
+      content="Having hardtime in finding Timetable?? Use me :)"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Timetable" />
+    <meta
+      property="og:description"
+      content="Having hardtime in finding Timetable?? Use me :)"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!--font-awesome-->
+    <script
+      src="https://kit.fontawesome.com/6b08127ac9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <h1 style="text-align: center">ECE Timetable</h1>
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating">
+        <select class="form-select" id="miniproject">
+          <option selected value="1">R.Ramya</option>
+          <option value="2">A.Viji</option>
+          <option value="3">M.Shanthi</option>
+        </select>
+        <label for="floatingSelectGrid">Miniproject</label>
+      </div>
+    </div>
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating col-3">
+        <select class="form-select" id="wireless">
+          <option selected value="1">T.Subashri</option>
+          <option value="2">G.Balamurugan</option>
+          <option value="3">L.Rajesh</option>
+        </select>
+        <label for="floatingSelectGrid">Wireless Lab</label>
+      </div>
+      <div>
+        <span>M.N</span>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+          />
         </div>
-        <br>
-        <div class="col-md">
-          <div class="form-floating">
-            <select class="form-select" id="wireless" aria-label="Wireless Lab">
-              <option selected>Select my staff</option>
-              <option value="1">T.Subashri</option>
-              <option value="2">G.balamurugan</option>
-              <option value="3">L.Rajesh</option>
-            </select>
-            <label for="floatingSelectGrid">Wireless Lab</label>
-          </div>
-        </div>
-        <br>
-        <div class="col-md">
-          <div class="form-floating">
-            <select class="form-select" id="optical" aria-label="Optical Lab">
-              <option selected>Select my staff</option>
-              <option value="1">S.Vasuhi</option>
-              <option value="2">S.Piramasubramaniam</option>
-              <option value="3">R.Ramya</option>
-            </select>
-            <label for="floatingSelectGrid">Optical Lab</label>
-          </div>
-        </div>
-    </body>    
+        <span>A.N</span>
+      </div>
+    </div>
+    <br />
+    <div class="staff-list-div">
+      <div class="form-floating">
+        <select class="form-select" id="optical">
+          <option selected value="1">S.Vasuhi</option>
+          <option value="2">S.Piramasubramaniam</option>
+          <option value="3">R.Ramya</option>
+        </select>
+        <label for="floatingSelectGrid">Optical Lab</label>
+      </div>
+    </div>
+  </body>
 </html>
