@@ -1,10 +1,10 @@
-.staff-list-div {
+.staff-list-div ,#header{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 html{
-    background-color: #FEFBF3;
+    background-color: #ffe4c4;
 }
 body{
     background-color: transparent;
@@ -13,16 +13,22 @@ body{
     width: 55vw;
     max-width: 200px;
 }
-
 .staff-list-switch {
     display: flex;
 }
-
+#header{
+    margin-top: 0.5rem;
+    justify-content: center;
+}
 .staff-list-div .form-switch {
     margin-left: 10px;
 }
 .staff-list-div label{
     width: max-content;
+}
+#header img{
+    max-height: 5rem;
+    padding: 0.5rem;
 }
 table{
     display: none;
