@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Primary Meta Tags -->
-    <title>TimeTable</title>
-    <link rel="shortcut icon" type="image/jpg" href="assets/Madras_Institute_of_Technology_logo.png"/>
-    <meta name="title" content="TimeTable" />
-    <meta
-      name="description"
-      content="Having hardtime in finding Timetable?? Use me :)"
-    />
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="TimeTable" />
-    <meta
-      property="og:description"
-      content="Having hardtime in finding TimeTable?? Use me :)"
-    />
-    <meta property="og:image" content="https://ece-time-table.web.app/public/assets/Madras_Institute_of_Technology_logo.png">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!--Bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
-    <!--font-awesome-->
-    <script
-      src="https://kit.fontawesome.com/6b08127ac9.js"
-      crossorigin="anonymous"
-    ></script>
-    <link href="style.css" rel="stylesheet" />
-  </head>
 
-  <body class="container">
-    <div id="header">
-      <img src="assets/Madras_Institute_of_Technology_logo.png">
-      <h1 style="text-align: center;">Madras Institute of Technology</h1>
-    </div>
-    <h1 style="text-align: center;margin: 1rem;color: #0d6efd;">ECE TimeTable</h1>
-    <br />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Primary Meta Tags -->
+  <title>TimeTable</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/Madras_Institute_of_Technology_logo.png" />
+  <meta name="title" content="TimeTable" />
+  <meta name="description" content="Having hardtime in finding Timetable?? Use me :)" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="TimeTable" />
+  <meta property="og:description" content="Having hardtime in finding TimeTable?? Use me :)" />
+  <meta property="og:image"
+    content="https://ece-time-table.web.app/public/assets/Madras_Institute_of_Technology_logo.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <!--font-awesome-->
+  <script src="https://kit.fontawesome.com/6b08127ac9.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="container">
+  <div id="header">
+    <img src="assets/Madras_Institute_of_Technology_logo.png">
+    <h1 style="text-align: center;">Madras Institute of Technology</h1>
+  </div>
+  <h1 style="text-align: center;margin: 0.5rem;color: #0d6efd;">ECE TimeTable</h1>
+  <br />
+  <div class="staff-list-container">
     <div class="staff-list-div">
       <div class="form-floating">
         <select class="form-select" id="sel_miniproj">
@@ -63,11 +51,7 @@
       <div class="staff-list-switch">
         <span>F.N</span>
         <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="check_miniproj"
-          />
+          <input class="form-check-input" type="checkbox" id="check_miniproj" />
         </div>
         <span>A.N</span>
       </div>
@@ -85,11 +69,7 @@
       <div class="staff-list-switch">
         <span>F.N</span>
         <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="check_wireless"
-          />
+          <input class="form-check-input" type="checkbox" id="check_wireless" />
         </div>
         <span>A.N</span>
       </div>
@@ -107,41 +87,39 @@
       <div class="staff-list-switch">
         <span>F.N</span>
         <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="check_optical"
-          />
+          <input class="form-check-input" type="checkbox" id="check_optical" />
         </div>
         <span>A.N</span>
       </div>
     </div>
-    <div class="m-5 text-center">
-      <button class="btn btn-primary" onclick="get_schedule_clk()">
-        GET SCHEDULE <i class="fas fa-arrow-circle-right"></i>
-      </button>
-    </div>
-    <div>
-      <table class="table table-hover table-primary table-striped">
+  </div>
+  <div class="m-3 text-center">
+    <button class="btn btn-primary" onclick="get_schedule_clk()">
+      GET SCHEDULE <i class="fas fa-arrow-circle-right"></i>
+    </button>
+  </div>
+  <div>
+    <table class="table table-hover table-primary table-striped">
+      <tr>
+        <th>Day</th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+      </tr>
+      <tbody id="sched_body">
         <tr>
-          <th>Day</th>
-          <th>Morning</th>
-          <th>Afternoon</th>
+          <td>12.2.2021</td>
+          <td>Optical lab</td>
+          <td>Free now</td>
         </tr>
-        <tbody id="sched_body">
-          <tr>
-            <td>12.2.2021</td>
-            <td>Optical lab</td>
-            <td>Free now</td>
-          </tr>
-          <tr>
-            <td>12.2.2021</td>
-            <td>Optical lab</td>
-            <td>Free now</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <tr>
+          <td>12.2.2021</td>
+          <td>Optical lab</td>
+          <td>Free now</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>

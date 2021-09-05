@@ -17,7 +17,7 @@ body{
     display: flex;
 }
 #header{
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     justify-content: center;
 }
 .staff-list-div .form-switch {
@@ -25,6 +25,10 @@ body{
 }
 .staff-list-div label{
     width: max-content;
+}
+.staff-list-container{
+    max-width: 500px;
+    margin: auto;
 }
 #header img{
     max-height: 5rem;
