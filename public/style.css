@@ -19,3 +19,6 @@
 .staff-list-div label{
     width: max-content;
 }
+table{
+    display: none;
+}

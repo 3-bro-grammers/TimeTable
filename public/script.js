@@ -1,14 +1,19 @@
+var staff_select = { w: [], x: [], y: [] };
 function get_schedule_clk() {
+  document.querySelector('table').style.display="table";
   if (sel_optical.value == sel_wireless.value || sel_miniproj.value == sel_optical.value || sel_miniproj.value == sel_wireless.value) {
     console.log("Invalid Combination");
     return;
   }
-  var staff_select = { w: [], x: [], y: [] };
   staff_select[sel_optical.value] = ["Optical Lab", check_optical.checked];
   staff_select[sel_wireless.value] = ["Wireless Lab", check_wireless.checked];
   staff_select[sel_miniproj.value] = ["Mini-Project", check_miniproj.checked];
-  console.log(staff_select)
-
+  localStorage.setItem('staff_data',JSON.stringify(staff_select));
+  //console.log(staff_select)
+  populate_data();
+}
+function populate_data()
+{
   var today = [new Date()];
   var tmrw = [new Date()];
   tmrw[0].setDate(tmrw[0].getDate() + 1);
@@ -46,4 +51,21 @@ function get_schedule_clk() {
       `
     });
 
+}
+window.onload=()=>{
+  var res=localStorage.getItem('staff_data');
+  if(res)
+  {
+    staff_select=JSON.parse(res);
+    ['sel_optical','sel_wireless','sel_miniproj'].forEach((e,i)=>{
+      var select = document.getElementById(e);
+      for(var i = 0;i < select.options.length;i++){
+          if(select.options[i].value == staff_select[e] ){
+              select.options[i].selected = true;
+          }
+      }
+    })
+   
+    populate_data();
+  }
 }
