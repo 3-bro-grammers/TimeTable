@@ -18,7 +18,12 @@ function get_schedule_clk() {
     alert_modal.show();
     return;
   }
-  
+  const element = document.querySelector('table');
+  element.classList.remove('animate__bounceIn');
+  setTimeout(()=>{
+    element.classList.add ('animate__bounceIn');
+  },100)  
+
   staff_select[sel_optical.value] = ["Optical Lab", check_optical.checked];
   staff_select[sel_wireless.value] = ["Wireless Lab", check_wireless.checked];
   staff_select[sel_miniproj.value] = ["Mini-Project", check_miniproj.checked];
@@ -50,8 +55,8 @@ function populate_data()
         if(e[0].getDay() == 0){
           classes[i] = ["Sunday", "Sunday"];
         }else{
-          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (sel_wireless.value!="x")) ? staff_select[data[e[1]][0]][0] : "Free Now",
-                         (staff_select[data[e[1]][1]][1] || (sel_wireless.value!="x"))  ? staff_select[data[e[1]][1]][0] : "Free Now" ];
+          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "Free Now",
+                         (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "Free Now" ];
         }
 
         innertext += `
@@ -107,7 +112,8 @@ window.onload=()=>{
     check_optical.checked = staff_select[sel_optical.value][1];
     check_wireless.checked = staff_select[sel_wireless.value][1];
     check_miniproj.checked = staff_select[sel_miniproj.value][1];
-  
+    const element = document.querySelector('table');
+    element.classList.add('animate__animated');
 
    
     populate_data();
