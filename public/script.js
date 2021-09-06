@@ -1,3 +1,14 @@
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+  navigator.serviceWorker.register('sw.js').then(function(registration) {
+    // Registration was successful
+  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+  }, function(err) {
+  // registration failed :(
+  console.log('ServiceWorker registration failed: ', err);
+});
+});
+}
 var staff_select = { w: [], x: [], y: [] };
 function get_schedule_clk() {
   
@@ -61,6 +72,22 @@ function populate_data()
 
 }
 window.onload=()=>{
+  var install = document.querySelector('#install');
+  install.style.display = 'none';
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    install.style.display = 'inline-block';
+    install.addEventListener('click', (e) => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          install.style.display = 'none';
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
   var res=localStorage.getItem('staff_data');
   if(res)
   {
