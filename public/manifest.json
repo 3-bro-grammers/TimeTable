@@ -1,0 +1,17 @@
+{
+    "short_name": "TimeTable",
+    "name": "TimeTable",
+    "icons": [
+      {
+        "src": "assets/logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": ".",
+    "theme_color": "#fff",
+    "description": "ECE TimeTable"
+  }

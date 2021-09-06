@@ -6,20 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Primary Meta Tags -->
   <title>TimeTable</title>
-  <link rel="shortcut icon" type="image/jpg" href="assets/Madras_Institute_of_Technology_logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
   <meta name="title" content="TimeTable" />
   <meta name="description" content="Having hardtime in finding Timetable?? Use me :)" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
+  <meta property="og:url" content="https://ece-time-table.web.app" />
   <meta property="og:title" content="TimeTable" />
   <meta property="og:description" content="Having hardtime in finding TimeTable?? Use me :)" />
-  <meta property="og:image"
-    content="https://ece-time-table.web.app/public/assets/Madras_Institute_of_Technology_logo.png">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://ece-time-table.web.app/public/assets/logo.png" />
   <!--Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
@@ -29,14 +24,18 @@
   <!--font-awesome-->
   <script src="https://kit.fontawesome.com/6b08127ac9.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" />
+  <!--manifest-->
+  <link rel="manifest" href="manifest.json" />
 </head>
 
 <body class="container">
   <div id="header">
-    <img src="assets/Madras_Institute_of_Technology_logo.png">
-    <h1 style="text-align: center;">Madras Institute of Technology</h1>
+    <img src="assets/Madras_Institute_of_Technology_logo.png" />
+    <h1 style="text-align: center">Madras Institute of Technology</h1>
   </div>
-  <h1 style="text-align: center;margin: 0.5rem;color: #0d6efd;">ECE TimeTable</h1>
+  <h1 style="text-align: center; margin: 0.5rem; color: #0d6efd">
+    ECE TimeTable
+  </h1>
   <br />
   <div class="staff-list-container">
     <div class="staff-list-div">
@@ -97,6 +96,24 @@
     <button class="btn btn-primary" onclick="get_schedule_clk()">
       GET SCHEDULE <i class="fas fa-arrow-circle-right"></i>
     </button>
+  </div>
+  <div class="modal fade" id="invalid_alert">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ECE TimeTable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Invalid Combination ! Please try a valid one.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <table class="table table-hover table-primary table-striped">

@@ -2,7 +2,9 @@ var staff_select = { w: [], x: [], y: [] };
 function get_schedule_clk() {
   
   if (sel_optical.value == sel_wireless.value || sel_miniproj.value == sel_optical.value || sel_miniproj.value == sel_wireless.value) {
-    console.log("Invalid Combination");
+    //console.log("Invalid Combination");
+    var alert_modal = new bootstrap.Modal(document.getElementById('invalid_alert'));
+    alert_modal.show();
     return;
   }
   
