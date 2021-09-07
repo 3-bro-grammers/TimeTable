@@ -55,8 +55,8 @@ function populate_data()
         if(e[0].getDay() == 0){
           classes[i] = ["Sunday", "Sunday"];
         }else{
-          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "Free Now",
-                         (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "Free Now" ];
+          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "<span class='free_style'>Free Now</span>",
+                         (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "<span class='free_style'>Free Now</span>" ];
         }
 
         innertext += `

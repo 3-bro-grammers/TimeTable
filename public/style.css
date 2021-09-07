@@ -59,3 +59,17 @@ span{
 #install i{
     margin: .5rem;
 }
+
+.free_style {
+    font-weight: bold;
+    color: #2675EC;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer i {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
