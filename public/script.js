@@ -52,8 +52,8 @@ function populate_data()
       var innertext = ``;
       
       [days[0],days[1], days[2]].forEach((e,i)=>{
-        if(e[0].getDay() == 0){
-          classes[i] = ["Sunday", "Sunday"];
+        if(!data[e[1]]){
+          classes[i] = ["Holiday", "Holiday"];
         }else{
           classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "<span class='free_style'>Free Now</span>",
                          (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "<span class='free_style'>Free Now</span>" ];
