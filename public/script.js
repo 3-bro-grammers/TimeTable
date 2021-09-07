@@ -119,3 +119,19 @@ window.onload=()=>{
     populate_data();
   }
 }
+
+sel_miniproj.addEventListener("change",(event)=>{
+  if (event.target.value != "w"){
+    check_miniproj.disabled = true;
+  }else{
+    check_miniproj.disabled = false;
+  }
+})
+
+sel_wireless.addEventListener("change",(event)=>{
+  if (event.target.value != "x"){
+    check_wireless.disabled = true;
+  }else{
+    check_wireless.disabled = false;
+  }
+})
