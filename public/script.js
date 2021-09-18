@@ -33,16 +33,13 @@ function get_schedule_clk() {
 }
 function populate_data()
 {
-  var days = []
-  days[0] = [new Date()];
-  days[1] = [new Date()];
-  days[2] = [new Date()];
-  days[1][0].setDate(days[1][0].getDate() + 1);
-  days[2][0].setDate(days[2][0].getDate() + 2);
-  days[0][1] = `${days[0][0].getDate()}.${days[0][0].getMonth() + 1}.${days[0][0].getFullYear()}`;
-  days[1][1] = `${days[1][0].getDate()}.${days[1][0].getMonth() + 1}.${days[1][0].getFullYear()}`;
-  days[2][1] = `${days[2][0].getDate()}.${days[2][0].getMonth() + 1}.${days[2][0].getFullYear()}`;
-
+  var days = [];
+  for(var i = 0; i<=6; i++){
+    days[i] = [new Date()];
+    days[i][0].setDate(days[i][0].getDate() + i);
+    days[i][1] = `${days[i][0].getDate()}.${days[i][0].getMonth() + 1}.${days[i][0].getFullYear()}`;
+  }
+  
   fetch("schedule.json",{cache: "no-store"})
     .then((res) => res.json())
     .then((data) => {
@@ -51,17 +48,19 @@ function populate_data()
 
       var innertext = ``;
       
-      [days[0],days[1], days[2]].forEach((e,i)=>{
+      days.forEach((e,i)=>{
         if(!data[e[1]]){
           classes[i] = ["Holiday", "Holiday"];
         }else{
-          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "<span class='free_style'>Free Now</span>",
-                         (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value!="x") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "<span class='free_style'>Free Now</span>" ];
+          classes[i] = [ (!staff_select[data[e[1]][0]][1] || (staff_select[data[e[1]][0]][0]=='Wireless Lab' && sel_wireless.value=="w") || (staff_select[data[e[1]][0]][0]=='Mini-Project' && sel_miniproj.value!="w")) ? staff_select[data[e[1]][0]][0] : "<span class='free_style'>Free Now</span>",
+                         (staff_select[data[e[1]][1]][1] || (staff_select[data[e[1]][1]][0]=='Wireless Lab' && sel_wireless.value=="w") || (staff_select[data[e[1]][1]][0]=='Mini-Project' && sel_miniproj.value!="w"))  ? staff_select[data[e[1]][1]][0] : "<span class='free_style'>Free Now</span>" ];
         }
+
+        var days_name = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         innertext += `
         <tr>
-          <td>${days[i][1]}</td>
+          <td>${days_name[days[i][0].getDay()]}</td>
           <td>${classes[i][0]}</td>
           <td>${classes[i][1]}</td>
         </tr> 
@@ -129,7 +128,7 @@ sel_miniproj.addEventListener("change",(event)=>{
 })
 
 sel_wireless.addEventListener("change",(event)=>{
-  if (event.target.value != "x"){
+  if (event.target.value == "w"){
     check_wireless.disabled = true;
   }else{
     check_wireless.disabled = false;
